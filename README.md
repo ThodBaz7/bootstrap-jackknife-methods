@@ -113,7 +113,7 @@ All scripts use **base R only** - no external packages required.
 - **KL Bootstrap p-value:** ~0.0488 (consistent with classic t-test)
 
 ## 📄 Report
-The full assignment report (in Greek) is available at [`Εργασία 1.pdf`](Εργασία%201.pdf)
+The full assignment report is available at [`report/bootstrap_jackknife_methods.pdf`](Εργασία%201.pdf)
 
 ## 📜 License
 MIT License - Free use and modification with attribution.
