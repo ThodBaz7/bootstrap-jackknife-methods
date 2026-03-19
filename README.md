@@ -112,7 +112,7 @@ All scripts use **base R only** - no external packages required.
 - **θ estimate:** ~0.875 (first PC explains 87.5% of variance)
 - **Jackknife bias:** Negligible (-0.0001)
 - **Jackknife standard error:** 0.017
-- **KL Bootstrap p-value:** ~0.0488 (consistent with classic t-test)
+- **KL Bootstrap p-value:** ~0.04
 
 ## 📄 Report
 The full assignment report is available at [`report/bootstrap_jackknife_methods.pdf`](report/bootstrap_jackknife_methods.pdf)
