@@ -16,17 +16,19 @@ This project was implemented as part of the **MSc in Applied Statistics** at the
 
 ## 🗂️ Project Structure
 ```
-statistiki-ergasia/
+bootstrap-jackknife-methods/
 │
-├── part1_bootstrap_correlation_partial.R    # Exercise 1: Bootstrap for correlation coefficients
-├── part2_jackknife_bootstrap_PCA_KL.R       # Exercise 2: Jackknife, Bootstrap PCA, KL divergence
-├── Εργασία 1.pdf                             # Full assignment report (in Greek)
+├── part1_bootstrap_correlation_partial.R    # Part 1: Bootstrap for correlation coefficients
+├── part2_jackknife_bootstrap_PCA_KL.R       # Part 2: Jackknife, Bootstrap PCA, KL divergence
 │
-├── data/                                      # Dataset files
+├── datasets/                                 # Dataset files
 │   ├── Games.txt
 │   └── BodyMeasurements.txt
 │
-└── README.md                                   # Project documentation
+├── report/                                   # Folder containing the assignment report
+│   └── bootstrap_jackknife_methods.pdf       # Full report of the analysis (in Greek)
+│
+└── README.md                                  # Project documentation
 ```
 
 ## 🚀 Installation & Execution
@@ -49,7 +51,7 @@ source("part2_jackknife_bootstrap_PCA_KL.R")
 
 ## 📈 Analysis Stages
 
-### 1️⃣ **Exercise 1: Correlation and Partial Correlation**
+### 1️⃣ **Part 1: Correlation and Partial Correlation**
 - Simple correlation coefficient X,Y calculation
 - Partial correlation coefficient X,Y|Z (controlling for Z)
 - Bootstrap methods for 95% confidence intervals:
@@ -59,29 +61,29 @@ source("part2_jackknife_bootstrap_PCA_KL.R")
   - Bootstrap-t
 - Comparison of all four methods for both correlation types
 
-### 2️⃣ **Exercise 2: Jackknife and Bootstrap for PCA**
+### 2️⃣ **Part 2: Jackknife and Bootstrap for PCA**
 
-#### **Part A: Jackknife Estimation**
+#### **A: Jackknife Estimation**
 - Calculation of **θ = λ₁ / Σλᵢ** (proportion of variance explained by first principal component)
 - Jackknife bias estimation
 - Jackknife standard error calculation
 - Comparison with original estimate
 
-#### **Part B: Bootstrap Confidence Intervals for θ**
+#### **B: Bootstrap Confidence Intervals for θ**
 - 95% confidence intervals using all four bootstrap methods
 - Method comparison and interpretation
 
-#### **Part C: Hypothesis Testing for μ₁ = (7/17)μ₅**
+#### **C: Hypothesis Testing for μ₁ = (7/17)μ₅**
 - Testing equality of means between first and fifth columns
 - Bootstrap simulation under H₀
 - P-value calculation and interpretation
 
-#### **Part D: Bootstrap for P(Z > 55)**
+#### **D: Bootstrap for P(Z > 55)**
 - 98% confidence intervals for probability estimation
 - All four bootstrap methods applied to binary outcome
 - Probability estimation for body measurements > 55
 
-#### **Part E: Hypothesis Testing with KL Divergence Bootstrap**
+#### **E: Hypothesis Testing with KL Divergence Bootstrap**
 - Classic t-test for H₀: μ₁ = 52
 - Standard bootstrap test
 - KL divergence bootstrap:
@@ -102,11 +104,11 @@ All scripts use **base R only** - no external packages required.
 
 ## 📝 Results Summary
 
-### **Exercise 1 Results:**
+### **Part 1 Results:**
 - **Simple correlation X,Y:** Nearly perfect positive correlation (all CIs near 1)
 - **Partial correlation X,Y|Z:** All CIs contain 0 → spurious correlation explained by Z
 
-### **Exercise 2 Results:**
+### **Part 2 Results:**
 - **θ estimate:** ~0.875 (first PC explains 87.5% of variance)
 - **Jackknife bias:** Negligible (-0.0001)
 - **Jackknife standard error:** 0.017
